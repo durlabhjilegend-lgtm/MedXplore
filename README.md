@@ -72,7 +72,7 @@ assembles the final picture by merging outputs.
 | Tool | How Used | Agent |
 |---|---|---|
 | **SQLite / PostgreSQL** | Primary data store; SQL views pre-compute expiry status and financial exposure | All |
-| **Claude API (claude-sonnet-4)** | Pass 2 of every agent — validates rule-based findings, adds root cause reasoning, produces structured JSON action plans | All |
+| **Gemini API (Gemini-sonnet-4)** | Pass 2 of every agent — validates rule-based findings, adds root cause reasoning, produces structured JSON action plans | All |
 | **Fuzzy string matching** (`difflib`) | Pass 1 of Vendor Dedup — O(n²) pairwise name similarity without API cost | Vendor Dedup |
 | **Statistical baseline** (`statistics`) | Pass 1 of Spend Anomaly — Z-score and MoM variance detection | Spend Anomaly |
 | **ReportLab** | PDF generation for billing receipts and audit reports | Flask app |
@@ -93,7 +93,7 @@ The system completes multiple steps without human intervention:
 **Fully autonomous (AUTO_EXECUTE):**
 1. Load and parse dataset (CSV/DB)
 2. Run rule-based classification (expiry tiers, anomaly detection, fuzzy matching)
-3. Call Claude API with structured prompt
+3. Call Gemini API with structured prompt
 4. Parse and validate JSON response
 5. Flag expired batches as non-dispensable in DB
 6. Write findings to AuditLog
