@@ -1,0 +1,15 @@
+month,service,cost_inr,instance_count,notes
+2024-08,EC2,180000,12,baseline
+2024-09,EC2,195000,13,baseline
+2024-10,EC2,210000,14,baseline
+2024-11,EC2,294000,14,possible anomaly
+2024-12,EC2,188000,12,normal
+2024-08,RDS,90000,4,baseline
+2024-09,RDS,92000,4,baseline
+2024-10,RDS,91000,4,baseline
+2024-11,RDS,180000,4,spike - check provisioning
+2024-12,RDS,94000,4,normal
+2024-08,S3,12000,,,baseline
+2024-09,S3,13000,,,baseline
+2024-10,S3,47000,,,anomaly - data transfer spike
+2024-11,S3,15000,,,normal

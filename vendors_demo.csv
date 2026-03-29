@@ -1,0 +1,11 @@
+vendor_id,vendor_name,contact_email,phone,category,annual_spend_inr
+V001,Sun Pharma Ltd,procurement@sunpharma.com,9876543210,Drugs,4500000
+V002,Sun Pharmaceuticals,purchase@sunpharmaind.com,9876543211,Drugs,3200000
+V003,Cipla Limited,orders@cipla.com,9123456780,Drugs,2800000
+V004,Cipla Ltd.,supply@cipla.co.in,9123456781,Drugs,1900000
+V005,3M Healthcare,india@3m.com,9988776655,Devices,1200000
+V006,3M Health Care India,sales@3mindia.com,9988776656,Devices,850000
+V007,Abbott India,abbott.orders@abbott.com,9001234567,Drugs,3100000
+V008,Abbot India Ltd,procurement@abbottindia.com,9001234568,Drugs,2200000
+V009,Baxter International,baxter@baxter.in,9871234560,Devices,950000
+V010,Medline Industries,info@medline.in,9871234561,Consumables,670000

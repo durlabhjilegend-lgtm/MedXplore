@@ -1,0 +1,111 @@
+{
+  "sla_status": {
+    "sla_name": "Phase 2 System Delivery",
+    "deadline": "2026-04-02",
+    "days_remaining": 3,
+    "pct_complete": 37.3,
+    "target_pct": 95,
+    "total_hours_estimated": 158,
+    "total_hours_done": 59,
+    "total_hours_remaining": 99,
+    "team_capacity_hours": 120,
+    "shortfall_hours": 0,
+    "will_miss_sla": false,
+    "estimated_days_late": 0,
+    "projected_penalty_inr": 0,
+    "max_penalty_inr": 1500000,
+    "critical_tasks_remaining": 6,
+    "critical_hours_remaining": 67,
+    "risk_level": "LOW"
+  },
+  "options": {
+    "deferrable_tasks": [
+      {
+        "task_id": "T006",
+        "task_name": "Documentation update",
+        "priority": "LOW",
+        "status": "NOT_STARTED",
+        "estimated_hours": 8,
+        "completed_hours": 0,
+        "assigned_to": "Priya Singh",
+        "deadline": "",
+        "sla_category": "docs"
+      },
+      {
+        "task_id": "T008",
+        "task_name": "UI regression testing",
+        "priority": "MEDIUM",
+        "status": "NOT_STARTED",
+        "estimated_hours": 16,
+        "completed_hours": 0,
+        "assigned_to": "Amit Sharma",
+        "deadline": "",
+        "sla_category": "qa"
+      }
+    ],
+    "hours_reclaimable": 24,
+    "low_priority_workers": {
+      "Priya Singh": [
+        {
+          "task_id": "T006",
+          "task_name": "Documentation update",
+          "priority": "LOW",
+          "status": "NOT_STARTED",
+          "estimated_hours": 8,
+          "completed_hours": 0,
+          "assigned_to": "Priya Singh",
+          "deadline": "",
+          "sla_category": "docs"
+        }
+      ]
+    },
+    "at_risk_critical_tasks": [
+      {
+        "task_id": "T002",
+        "task_name": "API endpoint testing",
+        "priority": "HIGH",
+        "status": "IN_PROGRESS",
+        "estimated_hours": 16,
+        "completed_hours": 6,
+        "assigned_to": "Priya Singh",
+        "deadline": "",
+        "sla_category": "qa"
+      },
+      {
+        "task_id": "T003",
+        "task_name": "Security audit review",
+        "priority": "HIGH",
+        "status": "NOT_STARTED",
+        "estimated_hours": 24,
+        "completed_hours": 0,
+        "assigned_to": "Amit Sharma",
+        "deadline": "",
+        "sla_category": "compliance"
+      },
+      {
+        "task_id": "T009",
+        "task_name": "Failover configuration",
+        "priority": "CRITICAL",
+        "status": "IN_PROGRESS",
+        "estimated_hours": 10,
+        "completed_hours": 3,
+        "assigned_to": "Neha Gupta",
+        "deadline": "",
+        "sla_category": "infra"
+      },
+      {
+        "task_id": "T010",
+        "task_name": "Stakeholder sign-off meeting",
+        "priority": "HIGH",
+        "status": "NOT_STARTED",
+        "estimated_hours": 4,
+        "completed_hours": 0,
+        "assigned_to": "Rohit Mehta",
+        "deadline": "",
+        "sla_category": "governance"
+      }
+    ],
+    "reassignment_feasible": true
+  },
+  "ai_recovery": null
+}

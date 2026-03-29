@@ -1,0 +1,100 @@
+{
+  "anomalies": [
+    {
+      "category": "ec2_compute",
+      "prev_month": "2025-12",
+      "curr_month": "2026-01",
+      "prev_cost_inr": 118460.93,
+      "curr_cost_inr": 3703071.32,
+      "pct_change": 3025.99,
+      "excess_spend_inr": 3584610.39,
+      "baseline_avg_inr": 118460.93,
+      "z_score": 0,
+      "severity": "CRITICAL",
+      "direction": "SPIKE"
+    },
+    {
+      "category": "rds_database",
+      "prev_month": "2025-12",
+      "curr_month": "2026-01",
+      "prev_cost_inr": 81506.74,
+      "curr_cost_inr": 2473494.97,
+      "pct_change": 2934.71,
+      "excess_spend_inr": 2391988.23,
+      "baseline_avg_inr": 81506.74,
+      "z_score": 0,
+      "severity": "CRITICAL",
+      "direction": "SPIKE"
+    },
+    {
+      "category": "ec2_compute",
+      "prev_month": "2026-02",
+      "curr_month": "2026-03",
+      "prev_cost_inr": 3425612.27,
+      "curr_cost_inr": 5147467.44,
+      "pct_change": 50.26,
+      "excess_spend_inr": 1721855.17,
+      "baseline_avg_inr": 2415714.84,
+      "z_score": 1.37,
+      "severity": "CRITICAL",
+      "direction": "SPIKE"
+    },
+    {
+      "category": "s3_storage",
+      "prev_month": "2025-12",
+      "curr_month": "2026-01",
+      "prev_cost_inr": 46051.98,
+      "curr_cost_inr": 1390240.57,
+      "pct_change": 2918.85,
+      "excess_spend_inr": 1344188.59,
+      "baseline_avg_inr": 46051.98,
+      "z_score": 0,
+      "severity": "CRITICAL",
+      "direction": "SPIKE"
+    },
+    {
+      "category": "data_transfer",
+      "prev_month": "2025-12",
+      "curr_month": "2026-01",
+      "prev_cost_inr": 33089.61,
+      "curr_cost_inr": 935956.7,
+      "pct_change": 2728.55,
+      "excess_spend_inr": 902867.09,
+      "baseline_avg_inr": 33089.61,
+      "z_score": 0,
+      "severity": "CRITICAL",
+      "direction": "SPIKE"
+    },
+    {
+      "category": "lambda",
+      "prev_month": "2025-12",
+      "curr_month": "2026-01",
+      "prev_cost_inr": 16932.28,
+      "curr_cost_inr": 465966.09,
+      "pct_change": 2651.94,
+      "excess_spend_inr": 449033.81,
+      "baseline_avg_inr": 16932.28,
+      "z_score": 0,
+      "severity": "CRITICAL",
+      "direction": "SPIKE"
+    }
+  ],
+  "resource_breakdown": {
+    "ec2_compute": {
+      "EC2_COMPUTE-001": 3703071.3199999994
+    },
+    "s3_storage": {
+      "S3_STORAGE-001": 1390240.5699999998
+    },
+    "rds_database": {
+      "RDS_DATABASE-001": 2473494.9699999993
+    },
+    "data_transfer": {
+      "DATA_TRANSFER-001": 935956.7000000002
+    },
+    "lambda": {
+      "LAMBDA-001": 465966.0900000001
+    }
+  },
+  "ai_diagnosis": null
+}

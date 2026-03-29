@@ -1,0 +1,9 @@
+task_id,task_name,assigned_to,hours_remaining,priority,status
+T001,Formulary review,Dr. Sharma,2,HIGH,IN_PROGRESS
+T002,Expiry audit - Ward A,Nurse Priya,8,HIGH,PENDING
+T003,Supplier reconciliation,Admin Raj,12,MEDIUM,PENDING
+T004,Regulatory submission,Dr. Mehta,5,CRITICAL,IN_PROGRESS
+T005,Stock reorder approval,Pharmacist Ali,3,HIGH,PENDING
+T006,Batch traceability check,Nurse Kavya,10,MEDIUM,NOT_STARTED
+T007,Invoice dispute - Cipla,Admin Raj,6,LOW,PENDING
+T008,Controlled substance log,Pharmacist Ali,4,CRITICAL,IN_PROGRESS

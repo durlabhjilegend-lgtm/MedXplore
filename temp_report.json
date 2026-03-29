@@ -1,0 +1,134 @@
+{
+  "vendors_analyzed": 10,
+  "pairs": [
+    {
+      "vendor_a_id": "V007",
+      "vendor_a_name": "Abbott India",
+      "vendor_b_id": "V008",
+      "vendor_b_name": "Abbot India Ltd",
+      "category": "drugs",
+      "name_similarity": 0.909,
+      "email_domain_match": false,
+      "vendor_a_spend_inr": 3100000,
+      "vendor_b_spend_inr": 2200000,
+      "combined_spend_inr": 5300000,
+      "estimated_saving_inr": 795000.0,
+      "confidence": "HIGH",
+      "recommended_action": "Merge Abbot India Ltd into Abbott India (higher spend = preferred master). Renegotiate consolidated contract."
+    },
+    {
+      "vendor_a_id": "V003",
+      "vendor_a_name": "Cipla Limited",
+      "vendor_b_id": "V004",
+      "vendor_b_name": "Cipla Ltd.",
+      "category": "drugs",
+      "name_similarity": 1.0,
+      "email_domain_match": true,
+      "vendor_a_spend_inr": 2800000,
+      "vendor_b_spend_inr": 1900000,
+      "combined_spend_inr": 4700000,
+      "estimated_saving_inr": 705000.0,
+      "confidence": "HIGH",
+      "recommended_action": "Merge Cipla Ltd. into Cipla Limited (higher spend = preferred master). Renegotiate consolidated contract."
+    },
+    {
+      "vendor_a_id": "V005",
+      "vendor_a_name": "3M Healthcare",
+      "vendor_b_id": "V006",
+      "vendor_b_name": "3M Health Care India",
+      "category": "devices",
+      "name_similarity": 0.963,
+      "email_domain_match": false,
+      "vendor_a_spend_inr": 1200000,
+      "vendor_b_spend_inr": 850000,
+      "combined_spend_inr": 2050000,
+      "estimated_saving_inr": 307500.0,
+      "confidence": "HIGH",
+      "recommended_action": "Merge 3M Health Care India into 3M Healthcare (higher spend = preferred master). Renegotiate consolidated contract."
+    }
+  ],
+  "clusters": [
+    {
+      "cluster_id": 1,
+      "vendor_ids": [
+        "V008",
+        "V007"
+      ],
+      "vendor_count": 2,
+      "total_spend_inr": 5300000,
+      "saving_potential_inr": 795000.0,
+      "pairs": [
+        {
+          "vendor_a_id": "V007",
+          "vendor_a_name": "Abbott India",
+          "vendor_b_id": "V008",
+          "vendor_b_name": "Abbot India Ltd",
+          "category": "drugs",
+          "name_similarity": 0.909,
+          "email_domain_match": false,
+          "vendor_a_spend_inr": 3100000,
+          "vendor_b_spend_inr": 2200000,
+          "combined_spend_inr": 5300000,
+          "estimated_saving_inr": 795000.0,
+          "confidence": "HIGH",
+          "recommended_action": "Merge Abbot India Ltd into Abbott India (higher spend = preferred master). Renegotiate consolidated contract."
+        }
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "vendor_ids": [
+        "V003",
+        "V004"
+      ],
+      "vendor_count": 2,
+      "total_spend_inr": 4700000,
+      "saving_potential_inr": 705000.0,
+      "pairs": [
+        {
+          "vendor_a_id": "V003",
+          "vendor_a_name": "Cipla Limited",
+          "vendor_b_id": "V004",
+          "vendor_b_name": "Cipla Ltd.",
+          "category": "drugs",
+          "name_similarity": 1.0,
+          "email_domain_match": true,
+          "vendor_a_spend_inr": 2800000,
+          "vendor_b_spend_inr": 1900000,
+          "combined_spend_inr": 4700000,
+          "estimated_saving_inr": 705000.0,
+          "confidence": "HIGH",
+          "recommended_action": "Merge Cipla Ltd. into Cipla Limited (higher spend = preferred master). Renegotiate consolidated contract."
+        }
+      ]
+    },
+    {
+      "cluster_id": 3,
+      "vendor_ids": [
+        "V005",
+        "V006"
+      ],
+      "vendor_count": 2,
+      "total_spend_inr": 2050000,
+      "saving_potential_inr": 307500.0,
+      "pairs": [
+        {
+          "vendor_a_id": "V005",
+          "vendor_a_name": "3M Healthcare",
+          "vendor_b_id": "V006",
+          "vendor_b_name": "3M Health Care India",
+          "category": "devices",
+          "name_similarity": 0.963,
+          "email_domain_match": false,
+          "vendor_a_spend_inr": 1200000,
+          "vendor_b_spend_inr": 850000,
+          "combined_spend_inr": 2050000,
+          "estimated_saving_inr": 307500.0,
+          "confidence": "HIGH",
+          "recommended_action": "Merge 3M Health Care India into 3M Healthcare (higher spend = preferred master). Renegotiate consolidated contract."
+        }
+      ]
+    }
+  ],
+  "ai_analysis": null
+}

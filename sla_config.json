@@ -1,0 +1,9 @@
+{
+  "sla_name": "Hospital Phase 2 Delivery",
+  "deadline": "2026-04-01",
+  "completion_target_pct": 95,
+  "penalty_per_day_inr": 150000,
+  "max_penalty_inr": 1500000,
+  "team_hours_per_day": 8,
+  "team_size": 5
+}
