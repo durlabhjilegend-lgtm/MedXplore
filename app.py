@@ -149,11 +149,16 @@ footer{text-align:center;color:#484f58;font-size:.8rem;padding:32px;border-top:1
   <div class="section">
     <h3>Run Agents</h3>
     <div class="btn-row">
-      <button class="btn btn-primary" onclick="runAgent('vendor')">Run Vendor Dedup</button>
-      <button class="btn btn-primary" onclick="runAgent('spend')">Run Spend Anomaly</button>
-      <button class="btn btn-primary" onclick="runAgent('sla')">Run SLA Sentinel</button>
+      <button class="btn btn-primary" onclick="runAgent('vendor', 'real')">Run Vendor Dedup (Real)</button>
+      <button class="btn btn-primary" onclick="runAgent('spend', 'real')">Run Spend Anomaly (Real)</button>
+      <button class="btn btn-primary" onclick="runAgent('sla', 'real')">Run SLA Sentinel (Real)</button>
     </div>
-    <div id="agent-output" class="output-box" style="display:none"></div>
+    <div class="btn-row" style="margin-top: 8px;">
+      <button class="btn btn-outline" onclick="runAgent('vendor', 'demo')">Run Vendor Dedup (Demo)</button>
+      <button class="btn btn-outline" onclick="runAgent('spend', 'demo')">Run Spend Anomaly (Demo)</button>
+      <button class="btn btn-outline" onclick="runAgent('sla', 'demo')">Run SLA Sentinel (Demo)</button>
+    </div>
+    <div class="output-box" id="agent-output" style="display:none"></div>
   </div>
 
   <!-- Agent Status -->
@@ -236,11 +241,11 @@ footer{text-align:center;color:#484f58;font-size:.8rem;padding:32px;border-top:1
 <footer>MedXplore Intelligence &copy; 2024 &mdash; ROI: 12-18x &mdash; Deployment cost: Rs 8-12L/year</footer>
 
 <script>
-function runAgent(agent) {
+function runAgent(agent, mode = 'real') {
   const box = document.getElementById('agent-output');
   box.style.display = 'block';
-  box.textContent = 'Running agent... please wait...';
-  fetch('/run-agent/' + agent)
+  box.textContent = `Running ${agent} (${mode})... please wait...`;
+  fetch('/run-agent/' + agent + '?mode=' + encodeURIComponent(mode))
     .then(r => r.json())
     .then(data => { box.textContent = data.output; })
     .catch(e => { box.textContent = 'Error: ' + e; });
@@ -279,27 +284,46 @@ def run_agent(agent):
     if "username" not in session:
         return jsonify({"output": "Not authenticated"}), 401
 
-    script_map = {
-        "vendor": ["python", "vendor_dedup.py", "--demo"],
-        "spend":  ["python", "spend_anomaly.py", "--demo"],
-        "sla":    ["python", "sla_sentinel.py",  "--demo"],
-    }
+    mode = request.args.get("mode", "real").lower()
+    root = os.path.dirname(os.path.abspath(__file__))
+
+    # Real-mode files bundled with the workspace
+    vendors_csv = os.path.join(root, "vendors_demo.csv")
+    spend_csv   = os.path.join(root, "cloud_spend_demo.csv")
+    tasks_csv   = os.path.join(root, "tasks_sla_demo.csv")
+    sla_json    = os.path.join(root, "sla_config.json")
+
+    if mode == "real":
+        script_map = {
+            "vendor": ["python", "vendor_dedup.py", "--vendors", vendors_csv],
+            "spend":  ["python", "spend_anomaly.py", "--data", spend_csv],
+            "sla":    ["python", "sla_sentinel.py", "--tasks", tasks_csv, "--sla", sla_json],
+        }
+    else:
+        script_map = {
+            "vendor": ["python", "vendor_dedup.py", "--demo"],
+            "spend":  ["python", "spend_anomaly.py", "--demo"],
+            "sla":    ["python", "sla_sentinel.py", "--demo"],
+        }
+
     cmd = script_map.get(agent)
     if not cmd:
         return jsonify({"output": "Unknown agent"})
 
     try:
         result = subprocess.run(
-            cmd, capture_output=True, text=True, timeout=60,
-            cwd=os.path.dirname(os.path.abspath(__file__))
+            cmd, capture_output=True, text=True, timeout=120,
+            cwd=root
         )
         output = result.stdout or result.stderr or "(no output)"
     except subprocess.TimeoutExpired:
-        output = "Agent timed out after 60s"
+        output = "Agent timed out after 120s"
     except Exception as e:
         output = f"Error running agent: {e}"
 
-    return jsonify({"output": output})
+    # Provide trace info for UI
+    header = f"[Agent={agent} mode={mode}]\n"
+    return jsonify({"output": header + output})
 
 
 @app.route("/logout")

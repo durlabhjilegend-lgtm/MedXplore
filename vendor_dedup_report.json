@@ -9,9 +9,9 @@
       "category": "drugs",
       "name_similarity": 0.909,
       "email_domain_match": false,
-      "vendor_a_spend_inr": 3100000,
-      "vendor_b_spend_inr": 2200000,
-      "combined_spend_inr": 5300000,
+      "vendor_a_spend_inr": 3100000.0,
+      "vendor_b_spend_inr": 2200000.0,
+      "combined_spend_inr": 5300000.0,
       "estimated_saving_inr": 795000.0,
       "confidence": "HIGH",
       "recommended_action": "Merge Abbot India Ltd into Abbott India (higher spend = preferred master). Renegotiate consolidated contract."
@@ -24,9 +24,9 @@
       "category": "drugs",
       "name_similarity": 1.0,
       "email_domain_match": true,
-      "vendor_a_spend_inr": 2800000,
-      "vendor_b_spend_inr": 1900000,
-      "combined_spend_inr": 4700000,
+      "vendor_a_spend_inr": 2800000.0,
+      "vendor_b_spend_inr": 1900000.0,
+      "combined_spend_inr": 4700000.0,
       "estimated_saving_inr": 705000.0,
       "confidence": "HIGH",
       "recommended_action": "Merge Cipla Ltd. into Cipla Limited (higher spend = preferred master). Renegotiate consolidated contract."
@@ -39,9 +39,9 @@
       "category": "devices",
       "name_similarity": 0.963,
       "email_domain_match": false,
-      "vendor_a_spend_inr": 1200000,
-      "vendor_b_spend_inr": 850000,
-      "combined_spend_inr": 2050000,
+      "vendor_a_spend_inr": 1200000.0,
+      "vendor_b_spend_inr": 850000.0,
+      "combined_spend_inr": 2050000.0,
       "estimated_saving_inr": 307500.0,
       "confidence": "HIGH",
       "recommended_action": "Merge 3M Health Care India into 3M Healthcare (higher spend = preferred master). Renegotiate consolidated contract."
@@ -51,11 +51,11 @@
     {
       "cluster_id": 1,
       "vendor_ids": [
-        "V007",
-        "V008"
+        "V008",
+        "V007"
       ],
       "vendor_count": 2,
-      "total_spend_inr": 5300000,
+      "total_spend_inr": 5300000.0,
       "saving_potential_inr": 795000.0,
       "pairs": [
         {
@@ -66,9 +66,9 @@
           "category": "drugs",
           "name_similarity": 0.909,
           "email_domain_match": false,
-          "vendor_a_spend_inr": 3100000,
-          "vendor_b_spend_inr": 2200000,
-          "combined_spend_inr": 5300000,
+          "vendor_a_spend_inr": 3100000.0,
+          "vendor_b_spend_inr": 2200000.0,
+          "combined_spend_inr": 5300000.0,
           "estimated_saving_inr": 795000.0,
           "confidence": "HIGH",
           "recommended_action": "Merge Abbot India Ltd into Abbott India (higher spend = preferred master). Renegotiate consolidated contract."
@@ -82,7 +82,7 @@
         "V003"
       ],
       "vendor_count": 2,
-      "total_spend_inr": 4700000,
+      "total_spend_inr": 4700000.0,
       "saving_potential_inr": 705000.0,
       "pairs": [
         {
@@ -93,9 +93,9 @@
           "category": "drugs",
           "name_similarity": 1.0,
           "email_domain_match": true,
-          "vendor_a_spend_inr": 2800000,
-          "vendor_b_spend_inr": 1900000,
-          "combined_spend_inr": 4700000,
+          "vendor_a_spend_inr": 2800000.0,
+          "vendor_b_spend_inr": 1900000.0,
+          "combined_spend_inr": 4700000.0,
           "estimated_saving_inr": 705000.0,
           "confidence": "HIGH",
           "recommended_action": "Merge Cipla Ltd. into Cipla Limited (higher spend = preferred master). Renegotiate consolidated contract."
@@ -109,7 +109,7 @@
         "V005"
       ],
       "vendor_count": 2,
-      "total_spend_inr": 2050000,
+      "total_spend_inr": 2050000.0,
       "saving_potential_inr": 307500.0,
       "pairs": [
         {
@@ -120,9 +120,9 @@
           "category": "devices",
           "name_similarity": 0.963,
           "email_domain_match": false,
-          "vendor_a_spend_inr": 1200000,
-          "vendor_b_spend_inr": 850000,
-          "combined_spend_inr": 2050000,
+          "vendor_a_spend_inr": 1200000.0,
+          "vendor_b_spend_inr": 850000.0,
+          "combined_spend_inr": 2050000.0,
           "estimated_saving_inr": 307500.0,
           "confidence": "HIGH",
           "recommended_action": "Merge 3M Health Care India into 3M Healthcare (higher spend = preferred master). Renegotiate consolidated contract."
