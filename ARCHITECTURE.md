@@ -1,8 +1,8 @@
-# PharmaCost Intelligence — Architecture Document
+# MedXplore Intelligence — Architecture Document
 
 ## System Overview
 
-PharmaCost Intelligence is a **domain-adaptable, multi-agent Cost Intelligence platform**.
+MedXplore Intelligence is a **domain-adaptable, multi-agent Cost Intelligence platform**.
 It was designed and demonstrated in pharmaceutical inventory management, but the same
 agent architecture is intentionally general-purpose — it handles any Track 3 scenario:
 vendor deduplication, cloud spend anomaly diagnosis, and SLA penalty prevention.
