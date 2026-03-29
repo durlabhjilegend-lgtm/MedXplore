@@ -116,7 +116,7 @@ The system completes multiple steps without human intervention:
 
 | Failure Mode | Handling |
 |---|---|
-| **Anthropic API unavailable** | Falls back to rule-based analysis — all agents produce output without AI. Degraded confidence but never silent failure. |
+| **Gemini API unavailable** | Falls back to rule-based analysis — all agents produce output without AI. Degraded confidence but never silent failure. |
 | **Malformed CSV/DB data** | Per-row try/catch; bad rows are skipped and counted in a `parse_errors` field. Report always generated. |
 | **JSON parse failure (AI response)** | Strips markdown fences, retries once. If still fails, returns raw text with `parse_failed: true` flag. |
 | **Empty dataset** | Returns `{"status": "no_data", "message": "..."}` — never crashes. |
@@ -165,10 +165,10 @@ The architecture handles novel scenarios because:
 
 ```bash
 # Install
-pip install flask reportlab anthropic
+pip install flask reportlab Gemini
 
 # Set API key (optional — falls back to rules without it)
-export ANTHROPIC_API_KEY=your_key
+export Gemini_API_KEY=your_key
 
 # Run mandatory scenario 1: Vendor deduplication
 python agents/vendor_dedup.py --demo
