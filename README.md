@@ -185,7 +185,7 @@ python agents/orchestrator.py --demo
 # Launch the web app
 python app.py   # → http://127.0.0.1:5000  (admin/admin123)
 ```
-
+#Developed by Durlabh Biswas, Ayush Kumar, Shreyan Porel
 On **your own data:**
 ```bash
 python agents/vendor_dedup.py --vendors your_500_vendors.csv
